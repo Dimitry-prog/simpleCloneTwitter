@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link type="Image/x-icon" href="../images/icons/logo.svg" rel="icon">
+  <link rel="stylesheet" href="../vendors/normalize.css">
+  <link rel="stylesheet" href="../scss/authorization.css">
+  <title>Authorization Simple Twitter</title>
+</head>
+
+<body class="page">
+  <header class="header page__header">
+    <nav class="menu menu_authorization header__menu">
+      <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M288 167.2V139.1c-28.25-36.38-47.13-79.29-54.13-125.2C231.7 .4054 214.8-5.02 206.1 5.481C184.1 30.36 168.4 59.7 157.2 92.07C191.4 130.3 237.2 156.7 288 167.2zM400 63.97c-44.25 0-79.1 35.82-79.1 80.08l.0014 59.44c-104.4-6.251-193-70.46-233-161.7C81.48 29.25 63.76 28.58 58.01 40.83C41.38 75.96 32.01 115.2 32.01 156.6c0 70.76 34.11 136.9 85.11 185.9c13.12 12.75 26.13 23.27 38.88 32.77L12.12 411.2c-10.75 2.75-15.5 15.09-9.5 24.47c17.38 26.88 60.42 72.54 153.2 76.29c8 .25 15.99-2.633 22.12-7.883l65.23-56.12l76.84 .0561c88.38 0 160-71.49 160-159.9l.0013-160.2l31.1-63.99L400 63.97zM400 160.1c-8.75 0-16.01-7.259-16.01-16.01c0-8.876 7.261-16.05 16.01-16.05s15.99 7.136 15.99 16.01C416 152.8 408.8 160.1 400 160.1z"/></svg>
+      <ul class="menu__links menu__links_authorization">
+        <li class="menu__item menu__item_authorization">
+          <a href="#" class="menu__link menu__link_authorization">Home</a>
+        </li>
+        <li class="menu__item menu__item_authorization">
+          <a href="#" class="menu__link menu__link_authorization">About</a>
+        </li>
+      </ul>
+      <div class="localization menu__localization">
+        <p class="localization__text">Language:</p>
+        <span class="localization__lang">English</span>
+      </div>
+    </nav>
+  </header>
+  <main class="main page__authorization">
+    <section class="authorization main__authorization">
+      <h1 class="authorization__title">Log in to Twitter</h1>
+      <form action="" class="login login_authorization">
+        <input type="email" class="input login__email login__email_authorization" placeholder="enter email">
+        <input type="password" class="input login__password login__password_authorization" placeholder="enter password">
+        <fieldset class='login__input-container'>
+          <input type="submit" class="login__submit login__submit_authorization button" value="Log in">
+          <label class="login__remember">
+              <input type="checkbox"> Remember me
+            </label>
+          <a href="#" class="login__forgot">Forgot password?</a>
+        </fieldset>
+      </form>
+      <div class="authorization__signin">
+        <p class="authorization__subtitle">New to Twitter? <a href="#" class="authorization__link">Sign up now >></a>
+        </p>
+        <p class="authorization__subtitle">Already using Twitter via text message? <a href="#" class="authorization__link">Activate your account >></a> </p>
+      </div>
+    </section>
+  </main>
+  <div class="modal page__authorization-modal modal__authorization">
+    <svg class="modal__svg modal__svg_close svg svg_close" xmlns="http://www.w3.org/2000/svg " viewBox="0 0 320 512 "><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9
+        40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z "/></svg>
+    <p class="modal__text">
+      The username or password you entered did not match. Please fill fields and try again
+    </p>
+  </div>
+  <script src="../scripts/authorization.js"></script>
+</body>
+
+</html>

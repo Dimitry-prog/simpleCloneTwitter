@@ -1,0 +1,109 @@
+@import './fonts';
+@import './vars';
+@import './global';
+.greetings {
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  @media screen and (max-width: 999px) {
+    grid-template-columns: 1fr;
+  }
+  &__login {
+    background-color: $backgoundColorGlobal;
+    display: grid;
+    grid-template-rows: .2fr 1fr;
+    justify-items: center;
+    @media screen and (max-width: 999px) {
+      order: -1;
+      padding-top: 15px;
+    }
+  }
+  &__info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media screen and (max-width: 999px) {
+      padding: 15px 15px;
+    }
+    @media screen and (max-width: 430px) {
+      width: 90%;
+    }
+  }
+  &__title {
+    margin: 15px 0 35px;
+  }
+  &__subtitle {
+    margin: 0 0 20px;
+  }
+  &__button {
+    margin-bottom: 15px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    &_signup {
+      background-color: $iconColor;
+      color: $tipsIconcolor;
+      &:hover {
+        background-color: $backgoundColorGlobal;
+        color: $buttonColorText;
+        border: 1px solid $iconColor;
+      }
+    }
+    &_login {
+      border: 1px solid $iconColor;
+      &:hover {
+        background-color: $iconColor;
+        color: $tipsIconcolor;
+      }
+    }
+  }
+}
+
+.tips {
+  display: grid;
+  align-items: flex-start;
+  grid-template-rows: repeat(3, max-content);
+  justify-content: center;
+  align-content: center;
+  row-gap: 15px;
+  background-color: $iconColor;
+  @media screen and (max-width: 999px) {
+    padding: 15px 0;
+  }
+  @media screen and (max-width: 430px) {
+    display: none;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+  &__icon {
+    width: 30px;
+    fill: $tipsIconcolor;
+    margin-right: 15px;
+    &_search {}
+    &_explore {}
+    &_join {}
+  }
+  &__text {
+    margin: 0;
+    color: $tipsIconcolor;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 5vh;
+  &__menu {
+    padding-bottom: 15px;
+  }
+  &__copyright {}
+  &__text {
+    margin: 0;
+    font-weight: 300;
+    color: $buttonColorText;
+  }
+}

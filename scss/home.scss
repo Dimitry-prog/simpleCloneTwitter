@@ -1,0 +1,621 @@
+@import './fonts';
+@import './vars';
+@import './global';
+.header {
+  &__container {
+    max-width: $containerWidth;
+    margin: 0 20px;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    @media screen and (min-width: $containerWidth) {
+      margin: 0 auto;
+    }
+    @media screen and (max-width: 780px) {
+      justify-content: space-between;
+    }
+  }
+  &__input-search {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin: 0 15px;
+    @media screen and (max-width: 780px) {
+      display: none;
+    }
+  }
+  &__button {
+    position: absolute;
+    left: 1%;
+  }
+  &__search {
+    width: 100%;
+    padding: 2px 15px 2px 35px;
+    border: 1px solid transparent;
+    background-color: $backgoundColorGlobal;
+    border-radius: 25px;
+    &:focus {
+      background-color: $tipsIconcolor;
+    }
+  }
+  &__account {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    &:hover {
+      cursor: pointer;
+    }
+    @media screen and (max-width: 780px) {
+      column-gap: 30px;
+    }
+  }
+  &__img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  &__name {
+    margin: 0;
+    font-size: 16px;
+    @media screen and (max-width: 650px) {
+      display: none;
+    }
+  }
+  &__account-svg {
+    @media screen and (max-width: 650px) {
+      display: none;
+    }
+  }
+}
+
+.svg {
+  width: 30px;
+  height: 30px;
+  fill: $svgHomeColor;
+  transition: .5s;
+  &_home {
+    fill: $iconColor;
+  }
+  &_hashtag {}
+  &_bell {}
+  &_email {}
+  &_search {
+    width: 15px;
+  }
+  &_account {
+    &:hover {
+      fill: $iconColor;
+      cursor: pointer;
+    }
+  }
+  &_star {}
+  &_photo {}
+  &_camera {}
+  &_graph {}
+  &_check {
+    width: 15px;
+  }
+  &_comment {}
+  &_retweet {}
+  &_heart {}
+  &_share {}
+  &_close {
+    &:hover {
+      cursor: pointer;
+      fill: $iconColor;
+    }
+  }
+  &_plus {
+    &:hover {
+      cursor: pointer;
+      fill: $iconColor;
+    }
+  }
+  &_profile {}
+  &_lists {}
+  &_bookmarks {}
+  &_ads {}
+  &_graph {}
+  &_feather {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    fill: $tipsIconcolor;
+  }
+  &_smile {}
+}
+
+.button {
+  &__svg-search {}
+}
+
+.acc-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.content {
+  max-width: 63%;
+  background-color: $tipsIconcolor;
+  border-radius: 5px;
+  @media screen and (max-width: 990px) {
+    max-width: 100%;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 4px 2px -3px $boxShadowContentHome;
+  }
+  &__title {
+    margin: 0;
+  }
+  &__icons {
+    align-items: center;
+  }
+  &__svg {
+    margin-right: 35px;
+    fill: $iconColor;
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+    &:last-of-type {
+      margin-right: 0;
+    }
+    @media screen and (max-width: 450px) {
+      margin-right: 15px;
+    }
+  }
+  &__svg-star {}
+  &__happening {
+    box-shadow: 0 4px 2px -3px $boxShadowContentHome;
+  }
+  &__acc-img {
+    @media screen and (max-width: 475px) {
+      display: none;
+    }
+  }
+  &__message {
+    width: 80%;
+    @media screen and (max-width: 475px) {
+      margin-left: 0;
+      width: 50%;
+    }
+    @media screen and (max-width: 350px) {
+      &::placeholder {
+        font-size: 12px;
+      }
+    }
+  }
+  &__svg-photo {}
+  &__svg-camera {}
+  &__svg-graph {}
+  &__posts {}
+  &__post {
+    padding: 20px;
+  }
+  &__img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    @media screen and (max-width: 475px) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+.post {
+  display: flex;
+  column-gap: 20px;
+  box-shadow: 0 4px 2px -3px $boxShadowContentHome;
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+  &__main {}
+  &__header {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    @media screen and (max-width: 390px) {
+      column-gap: 5px;
+    }
+  }
+  &__title {
+    margin: 0;
+    @media screen and (max-width: 390px) {
+      font-size: 14px;
+    }
+  }
+  &__svg {
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+      fill: $iconColor
+    }
+    @media screen and (max-width: 360px) {
+      width: 20px;
+    }
+  }
+  &__check {}
+  &__email {
+    margin: 0;
+    @media screen and (max-width: 360px) {
+      font-size: 13px;
+    }
+  }
+  &__time {
+    margin: 0;
+    @media screen and (max-width: 360px) {
+      font-size: 13px;
+    }
+  }
+  &__body {}
+  &__text {}
+  &__footer {
+    display: flex;
+    column-gap: 100px;
+    align-items: center;
+    padding-top: 15px;
+    @media screen and (max-width: 616px) {
+      column-gap: 40px;
+    }
+    @media screen and (max-width: 360px) {
+      column-gap: 20px;
+      padding-top: 5px;
+    }
+  }
+}
+
+.sidebar {
+  max-width: 35%;
+  border-radius: 5px;
+  @media screen and (max-width: 990px) {
+    display: none;
+  }
+  &__content {
+    background-color: $tipsIconcolor;
+    border-radius: 5px;
+    transition: 1s;
+  }
+  &__title {
+    margin: 0;
+    padding: 20px;
+    box-shadow: 0 4px 2px -3px $boxShadowContentHome;
+  }
+  &__body {}
+  &__info {
+    display: grid;
+    grid-template-columns: 90px repeat(2, 1fr);
+    column-gap: 15px;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 4px 2px -3px $boxShadowContentHome;
+  }
+  &__img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  &__names {}
+  &__subtitle {
+    margin: 0 0 10px;
+    @media screen and (max-width: 1030px) {
+      font-size: 16px;
+    }
+  }
+  &__email {
+    margin: 0;
+  }
+  &__button {
+    border: 1px solid $iconColor;
+    color: $iconColor;
+    padding: 10px 20px;
+    &:hover {
+      background-color: $iconColor;
+      color: $tipsIconcolor;
+    }
+  }
+  &__more-link {
+    text-decoration: none;
+    color: $iconColor;
+    display: block;
+    padding: 20px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__menu {
+    padding: 20px 20px 0;
+  }
+}
+
+.sidebar-info {
+  background: $modalBackgroundColor;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  visibility: hidden;
+  transition: 1s;
+  &_opened {
+    visibility: visible;
+  }
+  &__menu {
+    padding: 20px 0;
+  }
+}
+
+.account-info {
+  width: 280px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: -320px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: $tipsIconcolor;
+  transition: 1s;
+  &_opened {
+    right: 0;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 2px -3px $boxShadowContentHome;
+    padding: 0 0 20px;
+  }
+  &__title {
+    margin: 0;
+  }
+  &__svg {
+    &_close {}
+    &_plus {}
+    &_links {
+      width: 15px;
+      height: 15px;
+      margin-right: 10px;
+    }
+    &_user {}
+    &_lists {}
+    &_bookmarks {}
+    &_ads {}
+    &_graph {}
+  }
+  &__body {}
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+  &__img {}
+  &__follows {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+  &__following {
+    margin: 0;
+  }
+  &__followers {
+    margin: 0;
+  }
+  &__sheets {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  &__sheet {}
+  &__link {
+    font-size: 20px;
+    text-decoration: none;
+    color: $boxShadowContentHome;
+    transition: .5s;
+    &:hover {
+      color: $iconColor;
+      .account-info__svg_links {
+        fill: $iconColor;
+      }
+    }
+  }
+}
+
+.message {
+  display: flex;
+  padding: 20px;
+  &_content {}
+  &_pop-up {}
+  &__text {
+    background-color: $backgoundColorGlobal;
+    border-radius: 25px;
+    border: 1px solid transparent;
+    height: 50px;
+    padding: 0 15px;
+    margin: 0 20px;
+    line-height: 50px;
+    transition: .5s;
+    &:focus {
+      background-color: $tipsIconcolor;
+      color: $iconColor;
+      outline: 1px solid $iconColor;
+    }
+  }
+  &__icons {
+    display: flex;
+    column-gap: 15px;
+  }
+  &__svg {
+    fill: $iconColor;
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+  }
+  &__svg-photo {}
+  &__svg-camera {}
+  &__svg-graph {}
+}
+
+.pop-up {
+  background: $modalBackgroundColor;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  visibility: hidden;
+  transition: 1s;
+  &_opened {
+    visibility: visible;
+  }
+  &__wrapper {
+    border-radius: 15px;
+    width: 500px;
+    position: fixed;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fff;
+    transition: 1s;
+    &_opened {
+      top: 50%;
+    }
+    @media screen and (max-width: 541px) {
+      width: 90%;
+    }
+  }
+  &__header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 2px -3px $boxShadowContentHome;
+  }
+  &__svg {
+    &_close {}
+    &_plus {
+      fill: $iconColor;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    &_smile {
+      width: 20px;
+      height: 20px;
+      fill: $iconColor;
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+    }
+  }
+  &__post {
+    background-color: $iconColor;
+    padding: 10px 30px;
+    color: $tipsIconcolor;
+    opacity: .7;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &__body {
+    position: relative;
+  }
+  &__happening {}
+  &__acc-img {
+    align-items: center;
+  }
+  &__message {
+    width: 100%;
+    margin-right: 0;
+    min-height: 125px;
+    @media screen and (max-width: 354px) {
+      font-size: 14px;
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 20px 100px;
+  }
+  &__icons {
+    column-gap: 30px;
+    @media screen and (max-width: 354px) {
+      column-gap: 15px;
+    }
+  }
+}
+
+.dark-mode {
+  display: flex;
+  align-items: center;
+  &__text {
+    margin: 0;
+    color: $boxShadowContentHome;
+    margin-right: 15px;
+  }
+  &__wrapper {
+    width: 60px;
+    height: 25px;
+    background-color: $boxShadowContentHome;
+    border-radius: 50px;
+    transition: .5s;
+    &:hover {
+      cursor: pointer;
+    }
+    &_active {
+      background-color: $tipsIconcolor;
+    }
+  }
+  &__button {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: $darkModeColor;
+    border: 2px solid $tipsIconcolor;
+    &_active {
+      background: $tipsIconcolor;
+      transform: translateX(40px);
+      border: 2px solid $boxShadowContentHome;
+    }
+  }
+}
+
+.dark-theme {
+  background-color: $darkModeColor;
+  color: $tipsIconcolor;
+  transition: 1s;
+}
+
+.dark-theme__background {
+  background-color: $darkModeBackgroundColor;
+  transition: 1s;
+}
